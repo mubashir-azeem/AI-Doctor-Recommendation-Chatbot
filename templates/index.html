@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI-Powered Doctor Recommendation Chatbot</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+        }
+
+        .chat-container {
+            width: 500px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: gray;
+            margin-bottom: 15px;
+        }
+
+        .chat-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+            white-space: pre-line;
+        }
+
+        .user {
+            background: #4CAF50;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .bot {
+            background: #f1f1f1;
+        }
+
+        .input-box {
+            display: flex;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            margin-left: 10px;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .clear-btn {
+            background: #ff4d4d;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .clear-btn:hover {
+            background: #e60000;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="chat-container">
+    <div class="title">🩺 AI-Powered Doctor Recommendation Chatbot</div>
+    <div class="subtitle">Find the right doctor based on your symptoms</div>
+
+    <!-- Clear Chat Button -->
+    <form method="GET">
+        <button class="clear-btn">Clear Chat</button>
+    </form>
+
+    <div class="chat-box" id="chat-box">
+        {% for sender, message in chat %}
+            <div class="message {{ 'user' if sender == 'You' else 'bot' }}">
+                <strong>{{ sender }}:</strong><br>
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <form method="POST" class="input-box">
+        <input type="text" name="symptoms" placeholder="Type your symptoms..." required>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<!-- Auto-scroll script -->
+<script>
+    var chatBox = document.getElementById("chat-box");
+    chatBox.scrollTop = chatBox.scrollHeight;
+</script>
+
+</body>
+</html>
