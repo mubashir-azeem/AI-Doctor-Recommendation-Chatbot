@@ -1,0 +1,44 @@
+Symptom,Specialization
+chest pain,Cardiologist
+heart pain,Cardiologist
+heart problem,Cardiologist
+cardiac issue,Cardiologist
+high blood pressure,Cardiologist
+shortness of breath,Cardiologist
+palpitations,Cardiologist
+tight chest,Cardiologist
+pain in heart,Cardiologist
+breathing difficulty,Cardiologist
+
+skin rash,Dermatologist
+itching skin,Dermatologist
+acne,Dermatologist
+skin allergy,Dermatologist
+red spots,Dermatologist
+dry skin,Dermatologist
+eczema,Dermatologist
+fungal infection,Dermatologist
+skin irritation,Dermatologist
+pimples,Dermatologist
+
+headache,Neurologist
+migraine,Neurologist
+dizziness,Neurologist
+brain pain,Neurologist
+memory problem,Neurologist
+seizures,Neurologist
+loss of balance,Neurologist
+numbness,Neurologist
+nerve pain,Neurologist
+confusion,Neurologist
+
+back pain,Orthopedic
+joint pain,Orthopedic
+bone fracture,Orthopedic
+knee pain,Orthopedic
+shoulder pain,Orthopedic
+neck pain,Orthopedic
+leg pain,Orthopedic
+muscle pain,Orthopedic
+arthritis,Orthopedic
+spine pain,Orthopedic
